@@ -6,13 +6,21 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    color: #fff;
+    color: #b3b3b3;
 
 }
 
 a{
-    color: #fff;
+    color: #b3b3b3;
     text-decoration: none;
+}
+
+a:hover{
+    color: #fff;
+}
+
+ul{
+    list-style: none;
 }
 
 .clearfix::after{
@@ -26,49 +34,61 @@ main{
 }
 
 
-#left-menu{
+.left-menu{
     width: 220px;
     height: calc(100vh - 90px);
     background-color: #040404;
     padding: 10px;
-    display:
+    display:flex;
+    align-content: space-between;
+    flex-wrap: wrap;
 }
 
-#logo{
+.logo{
+    color:#fff;
     width: 150px;
     padding: 10px;
     margin: 10px 0;
 }
 
-#left-menu li{
+.left-menu li{
     padding: 10px;
     border-radius: 5px;
 }
 
-#left-menu li:hover{
+#menu-desktop li:hover{
     background-color: #282828;
     color: #fff
 }
 
-#left-menu li svg{
+.left-menu li svg{
     vertical-align: middle;
     margin-right: 20px;
 }
 
 .playlist{
-    padding: 10px;
     margin-top: 25px;
+    border-bottom: 1px solid #696969;
 }
 
 .playlist p{
+    color: #696969;
     font-size: 13px;
+    padding: 10px;
 }
 
+.playlist i{
+    font-size: 24px;
+    margin-right: 20px;
+}
 
+.menu-bottom i{
+    margin-right: 20px;
+}
 
-
-
-
+#menu-mobile{
+    display: none;
+}
 
 
 #right-container{
@@ -86,11 +106,33 @@ footer{
 
 
 @media  all and (max-width:768px) {
-    #left-menu{
-        width: 100px;
+    .left-menu{
+        width: 80px;
     }
 
+    #menu-desktop{
+        display: none;
+    }
+
+    #menu-mobile{
+        display: inherit;
+        padding: 0;
+    }
+
+    #menu-mobile .logo{
+        width: 70px;
+        padding: 10px 5px;
+    }
+
+    #menu-mobile li:hover{
+        border-left: 2px solid green;
+        border-radius: 0;
+    }
+
+    .menu-bottom i{
+        padding: 10px;
+    }
     #right-container{
-        width: calc(100vw - 100px);
+        width: calc(100vw - 80px);
     }
 }
