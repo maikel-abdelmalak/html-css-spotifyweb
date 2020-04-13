@@ -374,3 +374,10 @@ input::-moz-range-thumb {
         padding: 0 5px;
     }
 }
+
+@media all and (max-width: 480px) {
+    .section{
+        flex-direction: column;
+        align-items: center;
+    }
+}
